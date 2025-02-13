@@ -1,19 +1,22 @@
 body {
   background: linear-gradient(to bottom, #141e30, #243b55);
   color: white;
-  font-family: "Popins", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
 }
+
 header {
   position: relative;
   padding: 60px 20px;
 }
+
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
 }
+
 .subtext {
   font-style: italic;
   font-size: 1.2rem;
@@ -22,20 +25,29 @@ h1 {
 
 .witch-container {
   position: absolute;
-  left: -100px;
-  top: 20px;
+  top: 50px;
+  left: 10px;
 }
 
 #witch {
   width: 80px;
-  animation: fly 3s ease-in-out forwards;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: transform 2s ease-in-out;
 }
 
-.content {
-  padding: 40px;
-  max-width: 600px;
-  margin: auto;
+@keyframes fly-around {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(200px) translateY(-50px);
+  }
+  100% {
+    transform: translateX(400px) translateY(0px);
+  }
 }
+
 button {
   background: #ff6b6b;
   color: white;
@@ -44,16 +56,27 @@ button {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 8px;
-  transition: background 0.3 ease, transformq 0.2 ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
+
 button:hover {
   background: #ff4757;
   transform: scale(1.1);
 }
 
+.video-container {
+  margin-top: 20px;
+}
+
+video {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
 footer {
   margin-top: 40px;
   padding: 10px;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
   font-size: 0.9rem;
 }
