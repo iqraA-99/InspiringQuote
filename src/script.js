@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (witch && title) {
     let position = 0;
-    const stopPosition = title.offsetWidth - 270;
+    const stopPosition = title.offsetWidth - 100;
 
     function moveWitch() {
       if (position < stopPosition) {
@@ -16,8 +16,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     moveWitch();
   }
-});
-
-document.getElementById("dream-btn").addEventListener("click", function () {
-  document.querySelector(".subtext").innerText = "Dare to rise above limits.";
 });
