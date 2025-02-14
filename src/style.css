@@ -36,9 +36,10 @@ h1 {
   transition: transform 2s ease-in-out;
 }
 .content {
-  padding: 5px;
+  padding: 0;
   max-width: 600px;
-  margin: 5px auto;
+  margin: 20px auto 0;
+  text-align: center;
 }
 
 .content h2 {
@@ -54,7 +55,7 @@ h1 {
 .video-container {
   margin: auto;
   text-align: center;
-  margin-bottom: -10px;
+  margin-bottom: 30px;
 }
 
 .video-thumbnail {
@@ -66,8 +67,11 @@ h1 {
 }
 .p-info {
   font-weight: bold;
-  margin-top: -15px;
+  margin-top: -40px;
   padding-top: 0;
+  text-align: center;
+  display: block;
+  width: 100%;
 }
 
 .video-thumbnail:hover {
