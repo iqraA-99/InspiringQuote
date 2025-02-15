@@ -206,7 +206,10 @@
 
         if (witch && title) {
           let position = 0;
-          const stopPosition = title.offsetWidth - 230;
+          const stopPosition = Math.min(
+            title.offsetWidth - 230,
+            window.innerWidth - 100
+          );
 
           function moveWitch() {
             if (position < stopPosition) {
@@ -225,6 +228,14 @@
             document.querySelector(".subtext").innerText =
               "Dare to rise above limits.";
           });
+
+        window.addEventListener("resize", function () {
+          if (witch) {
+            witch.style.transform = "translateX(0px)";
+            position = 0;
+            moveWitch();
+          }
+        });
       });
     </script>
   </body>
